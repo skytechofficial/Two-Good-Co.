@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::selection{
+    color: #fff;
+    background-color: black;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+#nav{
+    height: 100px;
+    /* background-color: red; */
+    font-family: "poppins";
+    width: 99%;
+    /* background-color: aqua; */
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 999;
+    padding: 20px;
+}
+#nav-part1 svg{
+    height: 90px;
+    width: 90px;
+}
+#links{
+    padding: 10px;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    /* font-family: "poppins"; */
+    /* font-weight: 500; */
+}
+#nav-part2 #links a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 20px;
+}
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+#nav-part2 #icons i{
+    font-size: 14px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+#cursor {
+    height: 200px;
+    width: 200px;
+    background-color: #D5E6EF;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+    /* z-index: 999; */
+}
+#page1{
+    min-height: 70vh;
+    width: 100%;
+    position: relative;
+    padding: 0 1vw;
+    padding-top: 19vh;
+}
+#page1 h1{
+    font-size: 14vw;
+    font-family: futura;
+    text-transform: uppercase;
+    line-height: 14vw;
+    letter-spacing: -8px;
+}
+#video-container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: gray;
+    margin-top: 1vw;
+    /* object-fit: cover; */
+}
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-container #play{
+    padding: 3vw 2.3vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.3vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: futura;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5vw 3vw;
+    justify-content: space-between;
+}
+#page2 .elem{
+    /* position: relative; */
+    height: 100%;
+    width: 31%;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page2 .elem #dets{
+    height: 50px;
+    border-radius: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: start;
+    width: 80%;
+    position: absolute;
+    z-index: 99;
+    background-color: aquamarine;
+    transition: ease-in 0.1s;
+    /* transition-property: height;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s; */
+}
+#page2 .elem #dets:hover{
+    border-radius: 30px;
+    height: 200px;
+    cursor: pointer;
+    align-items: flex-start;
+    padding: 20px 0;
+
+}
+#page2 .elem #dets:hover #hover-info img{
+    opacity: 100%;
+
+}
+#page2 .elem #dets:hover #dot{
+    margin-top: 5px;
+}
+#page2 .elem #dets:hover h6{
+    opacity: 100%;
+}
+#dot{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+#page2 .elem #dets h3{
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 50px;
+}
+#page2 .elem #dets i{
+    margin-left: 43px;
+    margin-top: 4px;
+    position: relative;
+}
+#img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: -10px;
+}
+#hover-info img{
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -130px;
+    opacity: 0;
+}
+h6{
+    font-size: 10px;
+    font-family: "poppins";
+    margin-top: 60px;
+    margin-left: -155px;
+    opacity: 0;
+}
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.child{
+    height: 54vh;
+    width: 38vw;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child img{
+    height: 100%;
+}
+#page4{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+}
+#page4 h2{
+    font-family: "poppins";
+    font-weight: 600;
+    padding: 30px 30px
+}
+#page4 h4{
+    font-family: "poppins";
+    padding: 0px 30px;
+    font-weight: 400;
+}
+#page4 #second{
+    margin-top: 40px;
+}
+#page4 #third{
+    margin-top: 60px;
+}
+#page4 img{
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 120px;
+}
+#page4 img:nth-child(2){
+    margin-left: 850px;
+}
+#page5{
+    width: 100%;
+    height: 100vh;
+    /* background-color:darkolivegreen; */
+}
+#page5 h3{
+    padding: 10px 20px;
+    font-family: "poppins";
+    color: gray;
+    font-weight: 400;
+    font-size: 14px;
+}
+#page5 h4{
+    padding: 0px 20px;
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 14px;
+}
+#sth{
+    margin-top: -170px;
+    text-align: right;
+}
+#sfr{
+    text-align: right;
+}
+#logo{
+    position: absolute;
+    height: 270px;
+    width: 270px;
+    margin-left: 470px;
+    margin-top: -150px;
+}
+#linko{
+    position: absolute;
+    display: flex;
+    margin-left: 390px;
+    margin-top: 120px;
+}
+#linko p{
+    width: 160%;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: "poppins";
+    font-size: 12px;
+    margin-left: -100px;
+    margin-top: 150px;
+    text-align: left;
+}
+@media (max-width:600px) {
+    #links{
+        display: none;
+    }
+    #page1{
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    }
+    #page1 h1{
+        font-size: 15.5vw;
+        letter-spacing: -3px;
+    }
+#video-container{
+    height: 25vh;
+    width: 100%;
+    position: relative;
+    background-color: gray;
+    margin-top: 3vw;
+    /* object-fit: cover; */
+}
+
+#video-container #play{
+    padding: 8vw 5.2vw;
+    background-color: black;
+    color: #fff;
+    font-size: 4vw;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    font-family: futura;
+    border-radius: 50%;
+    opacity: 1;
+    scale: 1;
+}
+
+#page2{
+    /* background-color: red; */
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw 3vw;
+    justify-content: space-between;
+}
+#page2 .elem{
+    /* position: relative; */
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    padding-top: 4vw;
+}
+#page2 .elem #dets{
+    height: 40px;
+    border-radius: 50px;
+    width: 80%;
+    position: absolute;
+    z-index: 99;
+    background-color: aquamarine;
+}
+.child{
+    width: 88vw;
+}
+#img{
+    margin-top: -15px;
+}
+#page4 img{
+    height: 200px;
+    width: 100px;
+    object-fit: cover;
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 520px;
+}
+#page4 img:nth-child(2){
+    margin-left: 220px;
+}
+#page5{
+    width: 100%;
+    height: 100vh;
+    margin-top: 80px;
+    /* background-color: red; */
+    /* background-color:darkolivegreen; */
+}
+#page5 h3{
+    padding: 10px 20px;
+    font-family: "poppins";
+    color: gray;
+    font-weight: 400;
+    font-size: 14px;
+}
+#page5 h4{
+    padding: 0px 20px;
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 14px;
+}
+#sth{
+    margin-top: -170px;
+    text-align: right;
+}
+#sfr{
+    text-align: right;
+}
+#logo{
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    margin-left: 110px;
+    margin-top: 70px;
+}
+#linko{
+    position: absolute;
+    display: flex;
+    margin-left: 390px;
+    margin-top: 120px;
+}
+#linko p{
+    width: 120%;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: "poppins";
+    font-size: 12px;
+    margin-left: -350px;
+    margin-top: 130px;
+    text-align: left;
+}
+}
